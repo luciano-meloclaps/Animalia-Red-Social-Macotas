@@ -1,96 +1,92 @@
-// Gráfico 1: Mascotas en Latinoamérica
+// Variables para el gráfico 1
+const chart1Labels = ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020'];
+const chart1Data = [45, 53, 62, 70, 82, 94, 107, 121, 135, 150];
 
-const petData = {
-  labels: ['Perros', 'Gatos'],
-  datasets: [{
-    label: 'Cantidad de hogares con mascotas',
-    data: [0.595, 0.245],
-    backgroundColor: [
-      'rgba(54, 162, 235, 0.8)',
-      'rgba(255, 99, 132, 0.8)',
-    ],
-    borderColor: [
-      'rgba(54, 162, 235, 1)',
-      'rgba(255, 99, 132, 1)',
-    ],
-    borderWidth: 1
-  }]
-};
+// Variables para el gráfico 2
+const chart2Labels = ['Perros', 'Gatos', 'Pájaros', 'Peces', 'Otros'];
+const chart2Data = [67, 22, 7, 3, 1];
+const chart2Colors = ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF'];
 
-const petConfig = {
-  type: 'pie',
-  data: petData,
-};
+// Variables para el gráfico 3
+const chart3Labels = ['Argentina', 'Brasil', 'Chile', 'Colombia', 'México', 'Perú'];
+const chart3Data = [27, 37, 18, 8, 41, 21];
 
-let petChart = new Chart(
-  document.getElementById('pet-chart'),
-  petConfig
-);
-
-
-// Gráfico 2: Dueños de mascotas y tiempo dedicado
-
-const timeData = {
-  labels: ['Menos de 1 hora', 'Entre 1 y 2 horas', 'Entre 2 y 4 horas', 'Más de 4 horas'],
-  datasets: [{
-    label: 'Cantidad de dueños de mascotas',
-    data: [0.2, 0.35, 0.3, 0.15],
-    backgroundColor: 'rgba(75, 192, 192, 0.8)',
-    borderColor: 'rgba(75, 192, 192, 1)',
-    borderWidth: 1
-  }]
-};
-
-const timeConfig = {
-  type: 'bar',
-  data: timeData,
-  options: {
-    scales: {
-      y: {
-        beginAtZero: true,
-        ticks: {
-          stepSize: 0.1
-        }
-      }
-    }
-  }
-};
-
-let timeChart = new Chart(
-  document.getElementById('time-chart'),
-  timeConfig
-);
-
-
-// Gráfico 3: Población de mascotas en América Latina
-
-const populationData = {
-  labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020'],
-  datasets: [{
-    label: 'Cantidad de mascotas',
-    data: [100, 120, 140, 160, 190, 220, 250, 280, 310, 340],
-    fill: false,
-    borderColor: 'rgba(255, 159, 64, 1)',
-    tension: 0.1
-  }]
-};
-
-const populationConfig = {
+// Configuración del gráfico 1
+const chart1Config = {
   type: 'line',
-  data: populationData,
+  data: {
+    labels: chart1Labels,
+    datasets: [{
+      label: 'Población de mascotas en América Latina',
+      data: chart1Data,
+      fill: false,
+      borderColor: '#4CAF50',
+      tension: 0.1
+    }]
+  },
   options: {
+    responsive: true,
+    plugins: {
+      legend: {
+        display: false
+      }
+    },
     scales: {
       y: {
-        beginAtZero: true,
-        ticks: {
-          stepSize: 50
-        }
+        beginAtZero: true
       }
     }
   }
 };
 
-let populationChart = new Chart(
-  document.getElementById('population-chart'),
-  populationConfig
-);
+// Configuración del gráfico 2
+const chart2Config = {
+  type: 'pie',
+  data: {
+    labels: chart2Labels,
+    datasets: [{
+      data: chart2Data,
+      backgroundColor: chart2Colors
+    }]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: {
+        position: 'bottom'
+      }
+    }
+  }
+};
+
+// Configuración del gráfico 3
+const chart3Config = {
+  type: 'bar',
+  data: {
+    labels: chart3Labels,
+    datasets: [{
+      label: 'Población de mascotas por país',
+      data: chart3Data,
+      backgroundColor: '#FF6384'
+    }]
+  },
+  options: {
+    responsive: true,
+    indexAxis: 'y',
+    plugins: {
+      legend: {
+        display: false
+      }
+    },
+    scales: {
+      x: {
+        beginAtZero: true
+      }
+    }
+  }
+};
+
+// Renderización de los gráficos
+const chart1 = new Chart(document.getElementById('chart1'), chart1Config);
+const chart2 = new Chart(document.getElementById('chart2'), chart2Config);
+const chart3 = new Chart(document.getElementById('chart3'), chart3Config);
