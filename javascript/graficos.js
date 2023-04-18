@@ -86,7 +86,16 @@ const chart3Config = {
   }
 };
 
-// Renderización de los gráficos
-const chart1 = new Chart(document.getElementById('chart1'), chart1Config);
-const chart2 = new Chart(document.getElementById('chart2'), chart2Config);
-const chart3 = new Chart(document.getElementById('chart3'), chart3Config);
+// Función para renderizar los gráficos
+function renderCharts() {
+  const chart1Canvas = document.getElementById('chart1');
+  const chart2Canvas = document.getElementById('chart2');
+  const chart3Canvas = document.getElementById('chart3');
+  
+  // Renderización de los gráficos
+  const chart1 = new Chart(chart1Canvas, chart1Config);
+  const chart2 = new Chart(chart2Canvas, chart2Config);
+  const chart3 = new Chart(chart3Canvas, chart3Config);
+}
+
+renderCharts();
