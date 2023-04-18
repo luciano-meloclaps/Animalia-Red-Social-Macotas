@@ -1,4 +1,4 @@
 function scrollToSection() {
-  const featuresSection = document.querySelector('.features-container');
+  const featuresSection = document.querySelector('.features');
   featuresSection.scrollIntoView({ behavior: 'smooth' });
 }
