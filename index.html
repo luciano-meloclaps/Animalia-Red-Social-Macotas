@@ -1,214 +1,403 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="/sass/style.css" rel="stylesheet">
-  <!--Css Bootstrap-->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-  <!--Stats Chart-->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/sass/style.css" rel="stylesheet" />
+    <!--Css Bootstrap-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <!--Stats Chart-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
 
-</head>
 
-<body>
 
-  <!--NAVBAR-->
+    <!--NAVBAR-->
+    <nav class="navbar sticky-top navbar-expand-lg bg-ligh">
+      <div class="container-fluid">
+        <a class="navbar-brand name-marca">
+          <img
+            src="/media/iconAnimalia.png"
+            alt="Logo"
+            width="90"
+            height="78"
+            class="d-inline-block align-text-top"
+          />
+          Animalia
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-  <nav class="navbar sticky-top navbar-expand-lg bg-ligh">
-    <div class="container-fluid ">
-      <a class="navbar-brand name-marca">
-        <img src="/media/iconAnimalia.png" alt="Logo" width="90" height="78" class="d-inline-block align-text-top">
-        Animalia
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+    <section class="body-contenedor">
+      <!--Hero-->
+      <div class="hero">
+        <div class="hero-content">
+          <h1>Sabemos de amar</h1>
+          <p>
+            ¡Es hora de que tus mascotas tengan su propia red social! Descarga
+            nuestra aplicación móvil y conecta con otros dueños de mascotas para
+            compartir tus experiencias y consejos. Encuentra los mejores
+            veterinarios y cuidadores, y únete a nuestra comunidad de amantes de
+            mascotas. ¡No esperes más, haz clic ahora y únete a la diversión!
+          </p>
+          <button class="cta-btn" onclick="scrollToSection()">VER MAS</button>
+        </div>
+        <div class="hero-image">
+          <img
+            src="/media/Component 3imgHeroHome (1).png"
+            alt="Imagen del hero"
+          />
+        </div>
+      </div>
+
+      <!--Intro-->
+      <section class="features-container">
+      <p class="feature-header">Nuestros ideales</p>
+      <section class="features">
+        <div class="feature">
+          <div class="feature-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="100"
+              viewBox="0 0 14 14"
+              stroke-width="1"
+            >
+              <g>
+                <path
+                  d="M10,5V7a1,1,0,0,0,1,1h.5a2,2,0,0,0,2-2V3a1,1,0,0,0-1-1H11a2,2,0,0,1-.91-.22A6.88,6.88,0,0,0,7,1a6.88,6.88,0,0,0-3.11.78A2.07,2.07,0,0,1,3,2H1.5a1,1,0,0,0-1,1V6a2,2,0,0,0,2,2H3A1,1,0,0,0,4,7V5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="M11.5,8l-.31,1.57a4.27,4.27,0,0,1-8.38,0L2.5,8"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <line
+                  x1="6.5"
+                  y1="10"
+                  x2="7.5"
+                  y2="10"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></line>
+              </g>
+            </svg>
+          </div>
+          <h3 class="feature-title">Gestión de mascotas</h3>
+          <ul class="feature-list">
+            <li>
+              Registro de mascotas con información relevante, como nombre, raza,
+              edad y fotografía.
+            </li>
+            <li>
+              Calendario para programar citas con el veterinario y fechas de
+              vacunación.
+            </li>
+            <li>
+              Recordatorios automáticos para mantener actualizados los datos de
+              las mascotas y fechas importantes.
+            </li>
+          </ul>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="100"
+              viewBox="0 0 14 14"
+              stroke-width="1"
+            >
+              <g>
+                <path
+                  d="M.58,4.31C1.09,1.85,4.12,0,7,3.27c4.11-4.71,8.5,1.13,5.52,4.14L7,12.5l-3.23-3"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <polyline
+                  points="0.5 7 3 7 4.5 5 6.5 8.5 8 6.5 9.5 6.5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></polyline>
+              </g>
+            </svg>
+          </div>
+          <h3 class="feature-title">Cuidadores y veterinarios</h3>
+          <ul class="feature-list">
+            <li>
+              Búsqueda de cuidadores de mascotas cercanos a la ubicación del
+              usuario.
+            </li>
+            <li>
+              Filtros de búsqueda basados en las necesidades de la mascota, como
+              tamaño, edad y tipo de cuidado requerido.
+            </li>
+            <li>
+              Evaluaciones y comentarios de otros usuarios sobre los servicios
+              para ayudar a tomar decisiones informadas.
+            </li>
+          </ul>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="100"
+              viewBox="0 0 14 14"
+            >
+              <g>
+                <circle
+                  cx="5"
+                  cy="2.75"
+                  r="2.25"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></circle>
+                <path
+                  d="M4.5,12.5H.5V11A4.51,4.51,0,0,1,7,7"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <line
+                  x1="10.5"
+                  y1="7.5"
+                  x2="10.5"
+                  y2="13.5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></line>
+                <line
+                  x1="7.5"
+                  y1="10.5"
+                  x2="13.5"
+                  y2="10.5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></line>
+              </g>
+            </svg>
+          </div>
+          <h3 class="feature-title">Comunidad animal</h3>
+          <ul class="feature-list">
+            <li>
+              Grupos de discusión sobre temas relacionados con la salud y
+              cuidado de las mascotas.
+            </li>
+            <li>Red social para compartir fotos y videos de mascotas.</li>
+            <li>
+              Sección de consejos y recomendaciones sobre productos y servicios
+              para mascotas.
+            </li>
+          </ul>
+        </div>
+      </section>
+    </section>
+
+      <!--Chart-->
+      <section class="charts">
+        <div class="chart-container">
+          <div class="chart">
+            <canvas id="chart1"></canvas>
+            <div class="chart-text">
+              <h2>Población de mascotas en América Latina</h2>
+              <p>
+                Este gráfico muestra la evolución de la población de mascotas en
+                América Latina durante los últimos 10 años.
+              </p>
+              <p>Fuente: Encuesta Nacional de Mascotas.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="chart-container">
+          <div class="chart">
+            <canvas id="chart2"></canvas>
+            <div class="chart-text">
+              <h2>Distribución de mascotas por especie</h2>
+              <p>
+                Este gráfico muestra la distribución de mascotas por especie en
+                América Latina.
+              </p>
+              <p>Fuente: Encuesta Nacional de Mascotas.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="chart-container">
+          <div class="chart">
+            <canvas id="chart3"></canvas>
+            <div class="chart-text">
+              <h2>Población de mascotas por país</h2>
+              <p>
+                Este gráfico muestra la población de mascotas por país en
+                América Latina.
+              </p>
+              <p>Fuente: Encuesta Nacional de Mascotas.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Cards-->
+      <section class="content-card">
+        <div class="card" style="width: 20rem">
+          <img src="/media/person3.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Tamara</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+
+        <div class="card" style="width: 20rem">
+          <img src="/media/person1.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Jeronimo</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+
+        <div class="card" style="width: 20rem">
+          <img src="/media/person2.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Lautaro</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </section>
+    </section>
+    <footer class="footer">
+      <div class="footer__logo">
+        <img src="/media/iconAnimalia.png" width="60px" alt="Logo" />
+      </div>
+      <div class="footer__services">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#">Web Design</a></li>
+          <li><a href="#">Web Development</a></li>
+          <li><a href="#">Graphic Design</a></li>
+          <li><a href="#">SEO</a></li>
+        </ul>
+      </div>
+      <div class="footer__legal">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Cookies Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer__social">
+        <h4>Follow Us</h4>
+        <ul>
+          <li>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="50"
+              height="50"
+              fill="currentColor"
+              class="bi bi-facebook"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"
+              />
+            </svg>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
+          <li>
+            <a href="#"><i class="fab fa-twitter"></i></a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
+
+          <li>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="50"
+              height="50"
+              fill="currentColor"
+              class="bi bi-instagram"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
+              />
+            </svg>
           </li>
         </ul>
       </div>
-    </div>
-  </nav>
-
-  <section class="body-contenedor">
-  <!--Hero-->
-  <div class="hero">
-    <div class="hero-content">
-      <h1>Sabemos de amar</h1>
-      <p>¡Es hora de que tus mascotas tengan su propia red social! Descarga nuestra aplicación móvil y conecta con otros dueños de mascotas para compartir tus experiencias y consejos. 
-        Encuentra los mejores veterinarios y cuidadores, y únete a nuestra comunidad de amantes de mascotas. ¡No esperes más, haz clic ahora y únete a la diversión!</p>
-      <button class="cta-btn" onclick="scrollToSection()">VER MAS</button>
-    </div>
-    <div class="hero-image">
-      <img src="/media/Component 3imgHeroHome (1).png" alt="Imagen del hero">
-    </div>
-  </div>
-
-
- 
-  <!--Intro-->
-  <p class="feature-header">Nuestros ideales</p>
-  <section class="features">
-		<div class="feature">
-			<div class="feature-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="100" viewBox="0 0 14 14" stroke-width="1"><g><path d="M10,5V7a1,1,0,0,0,1,1h.5a2,2,0,0,0,2-2V3a1,1,0,0,0-1-1H11a2,2,0,0,1-.91-.22A6.88,6.88,0,0,0,7,1a6.88,6.88,0,0,0-3.11.78A2.07,2.07,0,0,1,3,2H1.5a1,1,0,0,0-1,1V6a2,2,0,0,0,2,2H3A1,1,0,0,0,4,7V5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path><path d="M11.5,8l-.31,1.57a4.27,4.27,0,0,1-8.38,0L2.5,8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path><line x1="6.5" y1="10" x2="7.5" y2="10" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
-			</div>
-			<h3 class="feature-title">Gestión de mascotas</h3>
-			<ul class="feature-list">
-				<li>Registro de mascotas con información relevante, como nombre, raza, edad y fotografía.</li>
-				<li>Calendario para programar citas con el veterinario y fechas de vacunación.</li>
-				<li>Recordatorios automáticos para mantener actualizados los datos de las mascotas y fechas importantes.</li>
-			</ul>
-		</div>
-
-		<div class="feature">
-			<div class="feature-icon">
-				<svg xmlns="http://www.w3.org/2000/svg" width="100" viewBox="0 0 14 14" stroke-width="1"><g><path d="M.58,4.31C1.09,1.85,4.12,0,7,3.27c4.11-4.71,8.5,1.13,5.52,4.14L7,12.5l-3.23-3" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path><polyline points="0.5 7 3 7 4.5 5 6.5 8.5 8 6.5 9.5 6.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></polyline></g></svg>
-			</div>
-			<h3 class="feature-title">Cuidadores y veterinarios</h3>
-			<ul class="feature-list">
-				<li>Búsqueda de cuidadores de mascotas cercanos a la ubicación del usuario.</li>
-				<li>Filtros de búsqueda basados en las necesidades de la mascota, como tamaño, edad y tipo de cuidado requerido.</li>
-				<li>Evaluaciones y comentarios de otros usuarios sobre los servicios para ayudar a tomar decisiones informadas.</li>
-			</ul>
-		</div>
-
-		<div class="feature">
-			<div class="feature-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="100" viewBox="0 0 14 14"><g><circle cx="5" cy="2.75" r="2.25" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></circle><path d="M4.5,12.5H.5V11A4.51,4.51,0,0,1,7,7" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path><line x1="10.5" y1="7.5" x2="10.5" y2="13.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7.5" y1="10.5" x2="13.5" y2="10.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
-			</div>
-			<h3 class="feature-title">Comunidad animal</h3>
-			<ul class="feature-list">
-				<li>Grupos de discusión sobre temas relacionados con la salud y cuidado de las mascotas.</li>
-        <li>Red social para compartir fotos y videos de mascotas.</li>
-				<li>Sección de consejos y recomendaciones sobre productos y servicios para mascotas.</li>
-			</ul>
-		</div>
-	</section>
-  
-<!---About-->
-
-<!--Chart-->
-<section class="chart-section">
-  <h2>Estadísticas de mascotas en Latinoamérica</h2>
-  <div class="chart-container">
-    <canvas id="chart1"></canvas>
-  </div>
-  <p>Fuente: Euromonitor International</p>
-</section>
-<section class="chart-section">
-  <h2>Dedicatoria de tiempo de dueños de mascotas que trabajan a tiempo completo</h2>
-  <div class="chart-container">
-    <canvas id="chart2"></canvas>
-  </div>
-  <p>Fuente: American Veterinary Medical Association, 2018</p>
-</section>
-<section class="chart-section">
-  <h2>Número de mascotas por hogar en Latinoamérica</h2>
-  <div class="chart-container">
-    <canvas id="chart3"></canvas>
-  </div>
-  <p>Fuente: Kantar Worldpanel, 2021</p>
-</section>
-
-
-
- <!--Cards-->
- <section class="content-card">
-  <div class="card" style="width: 20rem">
-    <img src="/media/person3.jpg" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Tamara</h5>
-      <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
-  </div>
-
-  <div class="card" style="width: 20rem;">
-    <img src="/media/person1.jpg" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Jeronimo</h5>
-      <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
-  </div>
-
-    <div class="card" style="width: 20rem;">
-      <img src="/media/person2.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Lautaro</h5>
-        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  
-
-  
- 
-</section>
-
-</section>
-  <footer class="footer">
-    <div class="footer__logo">
-      <img src="/media/iconAnimalia.png" width="60px" alt="Logo">
-    </div>
-    <div class="footer__services">
-      <h4>Services</h4>
-      <ul>
-        <li><a href="#">Web Design</a></li>
-        <li><a href="#">Web Development</a></li>
-        <li><a href="#">Graphic Design</a></li>
-        <li><a href="#">SEO</a></li>
-      </ul>
-    </div>
-    <div class="footer__legal">
-      <h4>Legal</h4>
-      <ul>
-        <li><a href="#">Terms of Service</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Cookies Policy</a></li>
-      </ul>
-    </div>
-    <div class="footer__social">
-      <h4>Follow Us</h4>
-      <ul>
-        <li>
-          <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
-            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
-          </svg>
-      </li>
-        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-
-        <li>
-          <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
-            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
-          </svg>
-        </li>
-      </ul>
-    </div>
-  </footer>
+    </footer>
 
     <!--JavaScript-->
     <script src="/javascript/animacion.js"></script>
     <script src="/javascript/graficos.js"></script>
     <!-- JavaScript Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-</body>
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
-
-
