@@ -1,13 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@600&family=Kaushan+Script&family=Varela+Round&display=swap");
+// Custom.scss
+// Option A: Include all of Bootstrap
 
+// Include any default variable overrides here (though functions won't be available)
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Then add additional custom code here
+
+
+// Paleta de colores
 $color-primary: #e2d7d8;
 $color-secondary: #22223b;
 $color-tertiary: #c9a7ad;
 $color-quaternary: #f4f4f4;
-$font-main: "Varela Round", sans-serif;
-$font-title: "Fredoka", sans-serif;
-$font-marca: "Kaushan Script", cursive;
 
+// Fuentes
+$font-main: "Varela Round", sans-serif;
+$font-title: "Montserrat", sans-serif;
+$font-marca: "Kaushan Script", cursive;
 * {
   font-family: "Varela Round", sans-serif;
   margin: 0;
@@ -56,7 +67,6 @@ $font-marca: "Kaushan Script", cursive;
     justify-content: center;
     align-items: stretch;
     margin-bottom: 15vh;
-
     h1 {
       font-family: "Fredoka", sans-serif;
       font-size: 8rem;
@@ -120,7 +130,7 @@ $font-marca: "Kaushan Script", cursive;
     max-width: 40%;
 
     img {
-      height: 82vh;
+      height: 80vh;
     }
   }
 
@@ -144,39 +154,98 @@ $font-marca: "Kaushan Script", cursive;
       margin-bottom: 2rem;
     }
   }
-}
+} 
 
-.body-contenedor {
+.body {
   background-color: $color-primary;
   box-sizing: border-box;
-  .features-container {
-    height: 100vh;
 
-    .feature-header {
-      background: $color-tertiary;
-      border: none;
-      clip-path: ellipse(60% 100% at center top);
-      height: auto;
-      
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: $font-title;
-      color: $color-quaternary;
-      font-size: 8vh;
-
-      @media (max-width: 768px) {
-        clip-path: none;
-        background-color:$color-primary;
-        color: $color-secondary;
-        padding: 2.5rem 0rem;
-        text-align: left;
-        font-size: 6vh;
-        margin: 0;
+  .about-us {
+    .banner {
+      position: relative;
+      height: 600px;
+      background: url('../media/silvana-carlos-TPdR4J19SGQ-unsplash.jpg') no-repeat center center fixed;
+      background-size: cover;
+  
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6); // Opacidad oscura
+      }
+  
+      img {
+        filter: blur(5px); // Aplicar filtro blur a la imagen
+      }
+  
+      .banner-content {
+        position: absolute;
+        top: 50%; // Centrar verticalmente
+        left: 50%; // Centrar horizontalmente
+        transform: translate(-50%, -50%);
+        max-width: 800px;
+        width: 100%;
+        color: $color-quaternary;
+        text-align: center; // Centrar texto horizontalmente
+  
+        .title {
+          font-family: $font-marca;
+          font-size: 4.5rem;
+          font-weight: 900;
+          margin: 0;
+          text-transform: uppercase;
+          letter-spacing: 3px;
+          color: $color-primary;
+          animation: slideInLeft 1s ease-in-out forwards;
+        }
+  
+        .subtitle {
+          font-family: $font-main;
+          font-size: 3rem;
+          color: $color-tertiary;
+          margin-top: 1rem;
+          animation: slideInRight 1s ease-in-out forwards;
+        }
+  
+        .description {
+          font-family: $font-main;
+          font-size: 1.5rem;
+          margin-top: 2rem;
+          animation: slideInUp 1s ease-in-out forwards;
+        }
       }
     }
-
+  
+    // Responsive
+    @include media-breakpoint-down(sm) {
+      .banner {
+        height: 400px;
+  
+        .banner-content {
+          padding: 1rem;
+  
+          .title {
+            font-size: 3rem;
+  
+            .subtitle {
+              font-size: 2rem;
+              margin-top: 0.5rem;
+            }
+          }
+  
+          .description {
+            font-size: 1rem; // Tamaño de fuente más pequeño en la versión móvil
+            margin-top: 1.5rem;
+          }
+        }
+      }
+    }
+  
     .features {
+      background-color: $color-secondary;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-gap: 20px;
@@ -209,10 +278,11 @@ $font-marca: "Kaushan Script", cursive;
         @media screen and (max-width: 767px) {
           padding: .5rem;
         }
+       
 
         .feature-icon {
           margin-bottom: 30px;
-          color: $color-tertiary;
+          color: $color-tertiary; 
         }
 
         .feature-title {
@@ -238,12 +308,14 @@ $font-marca: "Kaushan Script", cursive;
   $primary-color: #4caf50;
   $secondary-color: #ff6384;
 
-  .container {
+  .chart-container {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
+    display: flex;
+    background-color: blue;
   }
 
   .chart {
@@ -252,6 +324,7 @@ $font-marca: "Kaushan Script", cursive;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    background-color: $color-quaternary;
 
     h2 {
       font-size: 24px;
