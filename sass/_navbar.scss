@@ -1,0 +1,15 @@
+.navbar {
+    background-color: $color-secondary;
+  
+    .name-marca {
+      font-size: xx-large;
+      font-family: "Kaushan Script", cursive;
+    }
+    a {
+      font-size: x-large;
+      color: $color-quaternary;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+    }
+  }

@@ -1,0 +1,41 @@
+// Paleta de colores
+$color-primary: #e2d7d8;
+$color-secondary: #22223b;
+$color-tertiary: #c9a7ad;
+$color-quaternary: #f4f4f4;
+
+// Fuentes
+$font-main: "Varela Round", sans-serif;
+$font-title: "Montserrat", sans-serif;
+$font-marca: "Kaushan Script", cursive;
+
+
+////Import Externos
+
+//Google Fonts
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@600&family=Kaushan+Script&family=Varela+Round&display=swap");
+// Bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+
+////Import Internos
+
+//Navbar
+@import '../sass/navbar';
+//Hero
+@import '../sass/hero';
+//About Us
+@import '../sass/about';
+//Footer
+@import '../sass/footer';
+//Chart
+@import '../sass/chart';
+
+
+* {
+  font-family: "Varela Round", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
