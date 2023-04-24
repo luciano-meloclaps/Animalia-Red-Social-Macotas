@@ -10842,7 +10842,6 @@ textarea.form-control-lg {
   align-items: center;
   height: 100vh;
   padding: 5vh;
-  /* Estilos para la sección siguiente */
 }
 .hero .hero-content {
   flex: 1;
@@ -10904,31 +10903,6 @@ textarea.form-control-lg {
 }
 .hero .hero-content .cta-btn:active {
   transform: translateY(1px);
-}
-.hero .hero-image {
-  flex: 1;
-  max-width: 40%;
-}
-.hero .hero-image img {
-  height: 80vh;
-}
-.hero #section-2 {
-  height: 70vh;
-  background-color: #f8f9fa;
-}
-@media screen and (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    height: auto;
-  }
-  .hero .hero-content {
-    max-width: 100%;
-    padding: 1rem;
-  }
-  .hero .hero-image {
-    max-width: 100%;
-    margin-bottom: 2rem;
-  }
 }
 
 .about-us .banner {
@@ -11070,7 +11044,6 @@ textarea.form-control-lg {
   background-color: #22223b;
   padding: 5rem;
   font-size: 1.2rem;
-  /* max-width: 1200px; */
   margin: 0 auto;
   justify-content: flex-end;
 }

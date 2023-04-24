@@ -1,130 +1,135 @@
 
 .footer {
-    display: flex;
-    background-color: $color-secondary;
-    padding: 5rem;
-    font-size: 1.2rem;
-    /* max-width: 1200px; */
-    margin: 0 auto;
-    justify-content: flex-end;
-  
-    &__logo {
-      flex: 1;
-      max-width: 250px;
-  
-      img {
-        width: 60%;
-      }
+  display: flex;
+  background-color: $color-secondary;
+  padding: 5rem;
+  font-size: 1.2rem;
+  margin: 0 auto;
+  justify-content: flex-end;
+
+  // Estilos del logo
+  &__logo {
+    flex: 1;
+    max-width: 250px;
+
+    img {
+      width: 60%;
     }
-  
-    &__services,
-    &__legal,
-    &__social {
-      flex: 1;
-      max-width: calc(25% - 1rem);
-  
-      h4 {
-        font-weight: bold;
-        margin-bottom: 1rem;
-        color: $color-tertiary;
+  }
+
+  // Estilos de las secciones de servicios, legal y social
+  &__services,
+  &__legal,
+  &__social {
+    flex: 1;
+    max-width: calc(25% - 1rem);
+
+    h4 {
+      font-weight: bold;
+      margin-bottom: 1rem;
+      color: $color-tertiary;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+
+      li {
+        margin-bottom: 0.5rem;
       }
-  
-      ul {
-        list-style: none;
-        padding-left: 0;
-  
-        li {
-          margin-bottom: 0.5rem;
+
+      a {
+        color: $color-quaternary;
+
+        &:hover {
+          color: $color-tertiary;
         }
-  
-        a {
-          color: $color-quaternary;
-  
-          &:hover {
-            color: $color-tertiary;
-          }
-        }
-      }
-    }
-  
-    &__social {
-      display: flex;
-      justify-content: flex-start;
-      flex-direction: column;
-  
-      ul {
-        display: flex;
-        justify-content: space-between;
-        width: 150px;
-  
-        li {
-          border-radius: 50%;
-          background-color: $color-quaternary;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-  
-          &:hover {
-            background-color: $color-tertiary;
-          }
-  
-          i {
-            color: #fff;
-          }
-        }
-      }
-    }
-  
-    @media screen and (max-width: 1199px) {
-      &__services,
-      &__legal,
-      &__social {
-        max-width: calc(33.33% - 1rem);
-      }
-    }
-  
-    @media screen and (max-width: 991px) {
-      flex-direction: column;
-  
-      &__services,
-      &__legal,
-      &__social {
-        max-width: 100%;
-        margin-right: 0;
-        margin-bottom: 1.5rem;
-      }
-    }
-  
-    @media screen and (max-width: 767px) {
-      &__services,
-      &__legal,
-      &__social {
-        max-width: 100%;
-        margin-right: 0;
-        margin-bottom: 1.5rem;
-      }
-  
-      &__social {
-        justify-content: center;
-      }
-  
-      ul {
-        width: 100%;
-  
-        li {
-          margin-right: 0rem;
-  
-          &:last-child {
-            margin-right: 0;
-          }
-        }
-      }
-    }
-  
-    @media screen and (max-width: 575px) {
-      &__logo {
-        margin-bottom: 1.5rem;
       }
     }
   }
-  
+
+  // Estilos específicos para la sección de social
+  &__social {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      width: 150px;
+
+      li {
+        border-radius: 50%;
+        background-color: $color-quaternary;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+          background-color: $color-tertiary;
+        }
+
+        i {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  // Estilos para pantallas de tamaño máximo 1199px
+  @media screen and (max-width: 1199px) {
+    &__services,
+    &__legal,
+    &__social {
+      max-width: calc(33.33% - 1rem);
+    }
+  }
+
+  // Estilos para pantallas de tamaño máximo 991px
+  @media screen and (max-width: 991px) {
+    flex-direction: column;
+
+    &__services,
+    &__legal,
+    &__social {
+      max-width: 100%;
+      margin-right: 0;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  // Estilos para pantallas de tamaño máximo 767px
+  @media screen and (max-width: 767px) {
+    &__services,
+    &__legal,
+    &__social {
+      max-width: 100%;
+      margin-right: 0;
+      margin-bottom: 1.5rem;
+    }
+
+    &__social {
+      justify-content: center;
+    }
+
+    ul {
+      width: 100%;
+
+      li {
+        margin-right: 0rem;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  // Estilos para pantallas de tamaño máximo 575px
+  @media screen and (max-width: 575px) {
+    &__logo {
+      margin-bottom: 1.5rem;
+    }
+  }
+}

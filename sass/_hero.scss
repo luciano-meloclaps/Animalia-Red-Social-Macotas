@@ -1,117 +1,95 @@
 
+// Hero section
 .hero {
-    background: rgb(201, 167, 173);
-    background: linear-gradient(
-      0deg,
-      rgba(201, 167, 173, 1) 0%,
-      rgba(219, 194, 196, 1) 25%,
-      rgba(242, 228, 230, 1) 50%,
-      rgba(242, 228, 230, 1) 75%,
-      rgba(242, 228, 230, 1) 100%
-    );
+  background: rgb(201, 167, 173);
+  background: linear-gradient(
+    0deg,
+    rgba(201, 167, 173, 1) 0%,
+    rgba(219, 194, 196, 1) 25%,
+    rgba(242, 228, 230, 1) 50%,
+    rgba(242, 228, 230, 1) 75%,
+    rgba(242, 228, 230, 1) 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; // Altura 100% de la ventana
+  
+  padding: 5vh; // Padding superior e inferior de 5% de la altura de la ventana
+  
+  // Contenido principal del hero
+  .hero-content {
+    flex: 1;
+    max-width: 50%; // Ancho máximo del 50% del viewport
+    height: 100%; // Altura 100% del contenido
+    
+    padding: 2rem;
+    
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
-    padding: 5vh;
-  
-    .hero-content {
-      flex: 1;
-      max-width: 50%;
-      height: 100%;
-      padding: 2rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: stretch;
-      margin-bottom: 15vh;
-      h1 {
-        font-family: "Fredoka", sans-serif;
-        font-size: 8rem;
-        margin-bottom: 2rem;
-        color: $color-tertiary;
-      }
-  
-      p {
-        font-size: 1.5rem;
-        margin-bottom: 2rem;
-        color: $color-secondary;
-      }
-  
-      .cta-btn {
-        position: relative;
-        overflow: hidden;
-        font-weight: 500;
+    align-items: stretch;
+    
+    margin-bottom: 15vh; // Margen inferior del 15% de la altura de la ventana
+    
+    // Encabezado principal
+    h1 {
+      font-family: "Fredoka", sans-serif;
+      font-size: 8rem;
+      margin-bottom: 2rem;
+      color: $color-tertiary;
+    }
+    
+    // Párrafo de descripción
+    p {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      color: $color-secondary;
+    }
+    
+    // Botón de llamado a la acción
+    .cta-btn {
+      position: relative;
+      overflow: hidden;
+      font-weight: 500;
+      padding: 20px 32px;
+      background-color: $color-secondary;
+      color: $color-quaternary;
+      font-size: 18px;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+      
+      &::after {
         padding: 20px 32px;
-        background-color: $color-secondary;
-        color: $color-quaternary;
-        font-size: 18px;
-        border-radius: 12px;
-        border: none;
-        cursor: pointer;
-        box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
-  
-        &::after {
-          padding: 20px 32px;
-          content: "HAZ CLICK AQUI!";
-          color: #22223b;
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          width: 100%;
-          height: 0;
-          background-color: $color-tertiary;
-          transform: translateY(100%);
-          transition: transform 0.3s ease-in-out, ease-in-out 0.3s;
-        }
-  
-        &:hover::after {
-          height: 100%;
-          transform: translateY(0);
-          transition: transform 0.3s ease-in-out, ease-in-out 0.3s;
-        }
-  
-        &:not(:hover)::after {
-          height: 0;
-          transform: translateY(100%);
-          transition: transform 0.3s ease-in-out, height 0.3s ease-in-out;
-        }
-  
-        &:active {
-          transform: translateY(1px);
-        }
+        content: "HAZ CLICK AQUI!";
+        color: #22223b;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background-color: $color-tertiary;
+        transform: translateY(100%);
+        transition: transform 0.3s ease-in-out, ease-in-out 0.3s;
+      }
+      
+      &:hover::after {
+        height: 100%;
+        transform: translateY(0);
+        transition: transform 0.3s ease-in-out, ease-in-out 0.3s;
+      }
+      
+      &:not(:hover)::after {
+        height: 0;
+        transform: translateY(100%);
+        transition: transform 0.3s ease-in-out, height 0.3s ease-in-out;
+      }
+      
+      &:active {
+        transform: translateY(1px);
       }
     }
-  
-    .hero-image {
-      flex: 1;
-      max-width: 40%;
-  
-      img {
-        height: 80vh;
-      }
-    }
-  
-    /* Estilos para la sección siguiente */
-    #section-2 {
-      height: 70vh;
-      background-color: #f8f9fa;
-    }
-  
-    @media screen and (max-width: 768px) {
-      flex-direction: column;
-      height: auto;
-  
-      .hero-content {
-        max-width: 100%;
-        padding: 1rem;
-      }
-  
-      .hero-image {
-        max-width: 100%;
-        margin-bottom: 2rem;
-      }
-    }
-  } 
-  
-  
+  }
+}
