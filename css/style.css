@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@600&family=Kaushan+Script&family=Varela+Round&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Kaushan+Script&family=Varela+Round&display=swap");
 /*!
  * Bootstrap  v5.2.3 (https://getbootstrap.com/)
  * Copyright 2011-2022 The Bootstrap Authors
@@ -10838,7 +10838,6 @@ textarea.form-control-lg {
   background: rgb(201, 167, 173);
   background: linear-gradient(0deg, rgb(201, 167, 173) 0%, rgb(219, 194, 196) 25%, rgb(242, 228, 230) 50%, rgb(242, 228, 230) 75%, rgb(242, 228, 230) 100%);
   display: flex;
-  justify-content: center;
   align-items: center;
   height: 100vh;
   padding: 5vh;
@@ -10856,6 +10855,7 @@ textarea.form-control-lg {
 }
 .hero .hero-content h1, .hero .hero-content .h1 {
   font-family: "Fredoka", sans-serif;
+  font-weight: 500;
   font-size: 8rem;
   margin-bottom: 2rem;
   color: #c9a7ad;
@@ -10939,18 +10939,18 @@ textarea.form-control-lg {
   text-align: center;
 }
 .about-us .banner .banner-content .title {
-  font-family: "Kaushan Script", cursive;
   font-size: 4.5rem;
-  font-weight: 900;
+  font-weight: 700;
   margin: 0;
   text-transform: uppercase;
   letter-spacing: 3px;
+  font-family: "Fredoka", sans-serif;
   color: #e2d7d8;
   animation: slideInLeft 1s ease-in-out forwards;
 }
 .about-us .banner .banner-content .subtitle {
-  font-family: "Varela Round", sans-serif;
-  font-size: 3rem;
+  font-family: "Fredoka", sans-serif;
+  font-size: 4.5rem;
   color: #c9a7ad;
   margin-top: 1rem;
   animation: slideInRight 1s ease-in-out forwards;
@@ -11230,6 +11230,54 @@ textarea.form-control-lg {
   padding: 7% 30vh;
   font-size: x-large;
   color: #22223b;
+}
+
+.intro {
+  background-color: #e2d7d8;
+  width: 100%;
+  height: 100%;
+}
+.intro .intro-content {
+  display: flex;
+  padding: 5rem;
+  justify-content: space-between;
+  gap: 50px;
+  flex-direction: row;
+}
+.intro .intro-content .column-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5rem;
+  font-family: "Fredoka", sans-serif;
+  color: #c9a7ad;
+  font-weight: 600;
+  font-size: 9vh;
+  text-transform: uppercase;
+}
+.intro .intro-content .column-left span {
+  font-family: "Fredoka", sans-serif;
+  color: #22223b;
+}
+.intro .intro-content .column-left img {
+  border-radius: 10%;
+  width: 75vh;
+}
+.intro .intro-content .column-right {
+  margin: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.intro .intro-content .column-right span {
+  color: #c9a7ad;
+  font-weight: 500;
+  font-size: 3rem;
+}
+.intro .intro-content .column-right p {
+  color: #22223b;
+  font-family: "Varela Round", sans-serif;
+  font-size: 1.5rem;
 }
 
 * {

@@ -6,7 +6,7 @@ $color-quaternary: #f4f4f4;
 
 // Fuentes
 $font-main: "Varela Round", sans-serif;
-$font-title: "Montserrat", sans-serif;
+$font-title: 'Fredoka', sans-serif;
 $font-marca: "Kaushan Script", cursive;
 
 //Breackpoints
@@ -21,7 +21,7 @@ $container-max-widths: (
 ////Import Externos
 
 //Google Fonts
-@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@600&family=Kaushan+Script&family=Varela+Round&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Kaushan+Script&family=Varela+Round&display=swap');
 // Bootstrap
 @import "../node_modules/bootstrap/scss/bootstrap";
 
@@ -38,6 +38,8 @@ $container-max-widths: (
 @import '../sass/footer';
 //Chart
 @import '../sass/chart';
+//
+@import '../sass/intro';
 
 
 * {

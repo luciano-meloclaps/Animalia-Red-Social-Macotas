@@ -35,19 +35,20 @@
       text-align: center; // Centrar texto horizontalmente
 
       .title {
-        font-family: $font-marca;
+
         font-size: 4.5rem;
-        font-weight: 900;
+        font-weight: 700;
         margin: 0;
         text-transform: uppercase;
         letter-spacing: 3px;
+        font-family: $font-title;
         color: $color-primary;
         animation: slideInLeft 1s ease-in-out forwards;
       }
 
       .subtitle {
-        font-family: $font-main;
-        font-size: 3rem;
+        font-family: $font-title;
+        font-size: 4.5rem;
         color: $color-tertiary;
         margin-top: 1rem;
         animation: slideInRight 1s ease-in-out forwards;
