@@ -1,0 +1,55 @@
+.benchmarking{
+    max-height: 100vh;
+    margin-top: 3rem;
+    background-color: $color-primary;
+    margin-bottom: 3.5vh;
+
+    .bench-container{
+    
+        margin: 0;
+        display:flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        gap: 12vh;
+
+        .column-right{
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            justify-content: center;
+            gap: 12vh;
+
+            .title{
+                
+                margin-top: 1.5rem;
+                font-size: 6.5rem;
+                color: $color-secondary;
+                text-decoration: underline solid 12px $color-tertiary;
+                text-transform: uppercase;
+                font-family: $font-title;
+                font-weight: 700;
+            }
+            
+            
+            .contain-text{
+                background-color: $color-secondary;
+                padding: 5rem;
+                font-size: 1.3rem;
+                border-radius: 36px 0px 0px 36px;
+                -webkit-border-radius: 36px 0px 0px 36px;
+                -moz-border-radius: 36px 0px 0px 36px;
+                
+                p{
+                    color: $color-primary;
+                }
+            }
+        }
+    }
+
+    img{
+        margin: 3.5rem;
+        height: 85vh;
+        border-radius: 5%;
+    }
+
+}

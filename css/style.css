@@ -11233,6 +11233,7 @@ textarea.form-control-lg {
 }
 
 .intro {
+  padding-top: 3rem;
   background-color: #e2d7d8;
   width: 100%;
   height: 100%;
@@ -11252,7 +11253,7 @@ textarea.form-control-lg {
   font-family: "Fredoka", sans-serif;
   color: #c9a7ad;
   font-weight: 600;
-  font-size: 5vh;
+  font-size: 5.5vh;
   text-transform: uppercase;
 }
 .intro .intro-content .column-left span {
@@ -11261,11 +11262,11 @@ textarea.form-control-lg {
 }
 .intro .intro-content .column-left img {
   border-radius: 5%;
-  width: 75vh;
+  width: 80vh;
   margin: 2rem 0;
 }
 .intro .intro-content .column-right {
-  margin: 5rem;
+  padding: 8rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -11295,7 +11296,7 @@ textarea.form-control-lg {
   font-family: "Fredoka", sans-serif;
   color: #c9a7ad;
   font-weight: 600;
-  font-size: 5vh;
+  font-size: 5.5vh;
   text-transform: uppercase;
 }
 .intro .intro-content-reverse .column-left-reverse span {
@@ -11304,11 +11305,11 @@ textarea.form-control-lg {
 }
 .intro .intro-content-reverse .column-left-reverse img {
   border-radius: 5%;
-  width: 75vh;
+  width: 80vh;
   margin: 2rem 0;
 }
 .intro .intro-content-reverse .column-right {
-  margin: 5rem;
+  padding: 8rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -11322,6 +11323,53 @@ textarea.form-control-lg {
   color: #22223b;
   font-family: "Varela Round", sans-serif;
   font-size: 1.3rem;
+}
+
+.benchmarking {
+  max-height: 100vh;
+  margin-top: 3rem;
+  background-color: #e2d7d8;
+  margin-bottom: 3.5vh;
+}
+.benchmarking .bench-container {
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 12vh;
+}
+.benchmarking .bench-container .column-right {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  gap: 12vh;
+}
+.benchmarking .bench-container .column-right .title {
+  margin-top: 1.5rem;
+  font-size: 6.5rem;
+  color: #22223b;
+  -webkit-text-decoration: underline solid 12px #c9a7ad;
+          text-decoration: underline solid 12px #c9a7ad;
+  text-transform: uppercase;
+  font-family: "Fredoka", sans-serif;
+  font-weight: 700;
+}
+.benchmarking .bench-container .column-right .contain-text {
+  background-color: #22223b;
+  padding: 5rem;
+  font-size: 1.3rem;
+  border-radius: 36px 0px 0px 36px;
+  -webkit-border-radius: 36px 0px 0px 36px;
+  -moz-border-radius: 36px 0px 0px 36px;
+}
+.benchmarking .bench-container .column-right .contain-text p {
+  color: #e2d7d8;
+}
+.benchmarking img {
+  margin: 3.5rem;
+  height: 85vh;
+  border-radius: 5%;
 }
 
 * {

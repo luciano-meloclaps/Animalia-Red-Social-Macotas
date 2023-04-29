@@ -1,4 +1,5 @@
 .intro {
+  padding-top: 3rem;
   background-color: $color-primary;
   width: 100%;
   height: 100%;
@@ -18,7 +19,7 @@
         font-family: $font-title;
         color: $color-tertiary;
         font-weight: 600;
-        font-size: 5vh;
+        font-size: 5.5vh;
         text-transform: uppercase;
       span {
         font-family: $font-title;
@@ -27,13 +28,13 @@
 
       img {
         border-radius: 5%;
-        width: 75vh;
+        width: 80vh;
         margin: 2rem 0;
       }
     }
 
     .column-right {
-      margin: 5rem;
+      padding: 8rem;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
@@ -67,7 +68,7 @@
         font-family: $font-title;
         color: $color-tertiary;
         font-weight: 600;
-        font-size: 5vh;
+        font-size: 5.5vh;
         text-transform: uppercase;
   
         span {
@@ -77,13 +78,13 @@
   
         img {
           border-radius: 5%;
-          width: 75vh;
+          width: 80vh;
           margin: 2rem 0;
         }
       }
 
     .column-right {
-      margin: 5rem;
+      padding: 8rem;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
