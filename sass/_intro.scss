@@ -5,30 +5,30 @@
 
   .intro-content {
     display: flex;
-    padding: 5rem;
+    padding: 0 3rem;
     justify-content: space-between; // Justifica los elementos horizontalmente
     gap: 50px;
     flex-direction: row; // Cambia la dirección de la fila
 
     .column-left {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: 5rem;
-      font-family: $font-title;
-      color: $color-tertiary;
-      font-weight: 600;
-      font-size: 9vh;
-      text-transform: uppercase;
-
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 5rem;
+        font-family: $font-title;
+        color: $color-tertiary;
+        font-weight: 600;
+        font-size: 5vh;
+        text-transform: uppercase;
       span {
         font-family: $font-title;
         color: $color-secondary;
       }
 
       img {
-        border-radius: 10%;
+        border-radius: 5%;
         width: 75vh;
+        margin: 2rem 0;
       }
     }
 
@@ -37,7 +37,7 @@
       display: flex;
       flex-direction: column;
       justify-content: space-around;
-
+      
       span {
         color: $color-tertiary;
         font-weight: 500;
@@ -47,8 +47,58 @@
       p {
         color: $color-secondary;
         font-family: $font-main;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
+      }  
+    }
+  }
+
+  .intro-content-reverse{
+    display: flex;
+    padding: .5 3rem;
+    justify-content: space-between; // Justifica los elementos horizontalmente
+    gap: 50px;
+    flex-direction: row-reverse; // Cambia la dirección de la fila
+
+    .column-left-reverse {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 5rem;
+        font-family: $font-title;
+        color: $color-tertiary;
+        font-weight: 600;
+        font-size: 5vh;
+        text-transform: uppercase;
+  
+        span {
+          font-family: $font-title;
+          color: $color-secondary;
+        }
+  
+        img {
+          border-radius: 5%;
+          width: 75vh;
+          margin: 2rem 0;
+        }
       }
+
+    .column-right {
+      margin: 5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      
+      span {
+        color: $color-tertiary;
+        font-weight: 500;
+        font-size: 3rem;
+      }
+
+      p {
+        color: $color-secondary;
+        font-family: $font-main;
+        font-size: 1.3rem;
+      }  
     }
   }
 }
