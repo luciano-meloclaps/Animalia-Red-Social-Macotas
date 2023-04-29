@@ -11327,7 +11327,7 @@ textarea.form-control-lg {
 
 .benchmarking {
   max-height: 100vh;
-  margin-top: 3rem;
+  margin-top: 5rem;
   background-color: #e2d7d8;
   margin-bottom: 3.5vh;
 }
@@ -11336,7 +11336,6 @@ textarea.form-control-lg {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  gap: 12vh;
 }
 .benchmarking .bench-container .column-right {
   display: flex;
@@ -11345,31 +11344,46 @@ textarea.form-control-lg {
   justify-content: center;
   gap: 12vh;
 }
-.benchmarking .bench-container .column-right .title {
+.benchmarking .bench-container .column-right .title-container {
+  text-align: center;
+}
+.benchmarking .bench-container .column-right .title-container .title {
   margin-top: 1.5rem;
-  font-size: 6.5rem;
+  font-size: 6rem;
   color: #22223b;
-  -webkit-text-decoration: underline solid 12px #c9a7ad;
-          text-decoration: underline solid 12px #c9a7ad;
   text-transform: uppercase;
   font-family: "Fredoka", sans-serif;
-  font-weight: 700;
+  font-weight: 600;
+}
+.benchmarking .bench-container .column-right .title-container .title:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0;
+  margin-top: 12px; /* la misma altura que el margen inferior del título */
+  border-bottom: 12px solid #c9a7ad;
+  margin-right: -50vw; /* ahora es el margen izquierdo */
 }
 .benchmarking .bench-container .column-right .contain-text {
   background-color: #22223b;
   padding: 5rem;
   font-size: 1.3rem;
-  border-radius: 36px 0px 0px 36px;
-  -webkit-border-radius: 36px 0px 0px 36px;
-  -moz-border-radius: 36px 0px 0px 36px;
+  border-radius: 30px 0px 0px 30px;
+  -webkit-border-radius: 30px 0px 0px 30px;
+  -moz-border-radius: 30px 0px 0px 30px;
 }
 .benchmarking .bench-container .column-right .contain-text p {
   color: #e2d7d8;
 }
+.benchmarking .bench-container .column-right .contain-text .p-inver {
+  color: #c9a7ad;
+}
 .benchmarking img {
-  margin: 3.5rem;
+  margin: 4rem;
   height: 85vh;
-  border-radius: 5%;
+  border-radius: 30px 29px 10px 10px;
+  -webkit-border-radius: 30px 29px 10px 10px;
+  -moz-border-radius: 30px 29px 10px 10px;
 }
 
 * {
