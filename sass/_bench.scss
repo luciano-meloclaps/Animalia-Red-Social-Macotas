@@ -1,9 +1,11 @@
 .benchmarking {
-    max-height: 100vh;
-    margin-top: 5rem;
+    height: 100vh;
+    padding-top: 3.5vh;
     background-color: $color-primary;
     margin-bottom: 3.5vh;
-  
+    @include media-breakpoint-down (lg) {
+    height: auto;
+    }
     .bench-container {
       margin: 0;
       display: flex;

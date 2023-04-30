@@ -1,5 +1,5 @@
 .intro {
-  padding-top: 3rem;
+  padding-top: 5rem;
   background-color: $color-primary;
   width: 100%;
   height: 100%;
@@ -12,15 +12,16 @@
     flex-direction: row; // Cambia la dirección de la fila
 
     .column-left {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 5rem;
-        font-family: $font-title;
-        color: $color-tertiary;
-        font-weight: 600;
-        font-size: 5.5vh;
-        text-transform: uppercase;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 5rem;
+      font-family: $font-title;
+      color: $color-tertiary;
+      font-weight: 600;
+      font-size: 5.5vh;
+      text-transform: uppercase;
+
       span {
         font-family: $font-title;
         color: $color-secondary;
@@ -34,11 +35,11 @@
     }
 
     .column-right {
-      padding: 8rem;
+      padding: 5rem;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
-      
+
       span {
         color: $color-tertiary;
         font-weight: 500;
@@ -49,11 +50,11 @@
         color: $color-secondary;
         font-family: $font-main;
         font-size: 1.3rem;
-      }  
+      }
     }
   }
 
-  .intro-content-reverse{
+  .intro-content-reverse {
     display: flex;
     padding: .5 3rem;
     justify-content: space-between; // Justifica los elementos horizontalmente
@@ -61,34 +62,34 @@
     flex-direction: row-reverse; // Cambia la dirección de la fila
 
     .column-left-reverse {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 5rem;
+      font-family: $font-title;
+      color: $color-tertiary;
+      font-weight: 600;
+      font-size: 5.5vh;
+      text-transform: uppercase;
+
+      span {
         font-family: $font-title;
-        color: $color-tertiary;
-        font-weight: 600;
-        font-size: 5.5vh;
-        text-transform: uppercase;
-  
-        span {
-          font-family: $font-title;
-          color: $color-secondary;
-        }
-  
-        img {
-          border-radius: 5%;
-          width: 80vh;
-          margin: 2rem 0;
-        }
+        color: $color-secondary;
       }
 
+      img {
+        border-radius: 5%;
+        width: 80vh;
+        margin: 2rem 0;
+      }
+    }
+
     .column-right {
-      padding: 8rem;
+      padding: 5rem;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
-      
+
       span {
         color: $color-tertiary;
         font-weight: 500;
@@ -98,8 +99,78 @@
       p {
         color: $color-secondary;
         font-family: $font-main;
-        font-size: 1.3rem;
-      }  
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  // Modificaciones para dispositivos móviles
+  @include media-breakpoint-down(lg) {
+    flex-direction: column;
+    height: auto;
+
+    .intro-content {
+      flex-direction: column;
+      justify-content: center;
+      gap: 0px;
+      padding: 0rem 1rem;
+
+      .column-left{
+        margin: 0rem;
+        padding: 0;
+        font-size: 1.5rem;
+        display: flex;
+      
+        img{
+          width: 90%;
+          
+        }
+      }
+    
+      .column-right {
+        padding: 1rem;
+
+
+        span {
+          font-size: 1.35rem;
+        }
+  
+        p {
+          font-size: 1rem;
+        }
+    }
+  }
+
+    .intro-content-reverse {
+      flex-direction: column;
+      justify-content: center;
+      gap: 0px;
+      padding: 3rem 1rem;
+
+      .column-left-reverse {
+        margin: 0rem;
+        padding: 0;
+        font-size: 1.5rem;
+        display: flex;
+        
+        img{
+          width: 90%;
+          
+        }
+      }
+
+      .column-right {
+        padding: 1rem;
+
+
+        span {
+          font-size: 1.35rem;
+        }
+  
+        p {
+          font-size: 1rem;
+        }
+      }
     }
   }
 }

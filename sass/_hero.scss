@@ -1,54 +1,73 @@
-
 // Hero section
 .hero {
-  background: rgb(201, 167, 173);
-  background: linear-gradient(
-    0deg,
-    rgba(201, 167, 173, 1) 0%,
-    rgba(219, 194, 196, 1) 25%,
-    rgba(242, 228, 230, 1) 50%,
-    rgba(242, 228, 230, 1) 75%,
-    rgba(242, 228, 230, 1) 100%
-  );
   display: flex;
-  
   align-items: center;
   height: 100vh; // Altura 100% de la ventana
-  
   padding: 5vh; // Padding superior e inferior de 5% de la altura de la ventana
-  
+
+  background: rgb(201, 167, 173);
+  background: linear-gradient(0deg,
+      rgba(201, 167, 173, 1) 0%,
+      rgba(219, 194, 196, 1) 25%,
+      rgba(242, 228, 230, 1) 50%,
+      rgba(242, 228, 230, 1) 75%,
+      rgba(242, 228, 230, 1) 100%);
+
+  @media screen and (max-width: 960px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: auto;
+    padding: 3vh 2vh;
+  }
+
   // Contenido principal del hero
   .hero-content {
     flex: 1;
-    max-width: 50%; // Ancho máximo del 50% del viewport
     height: 100%; // Altura 100% del contenido
-    
     padding: 2rem;
-    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: stretch;
-    
     margin-bottom: 15vh; // Margen inferior del 15% de la altura de la ventana
-    
+
+    @media screen and (max-width: 960px) {
+      margin-bottom: 2vh;
+      padding: 0;
+    }
+
     // Encabezado principal
     h1 {
       font-family: $font-title;
-      font-weight: 500;
-      font-size: 8rem;
+      font-weight: 600;
+      font-size: 7rem;
       margin-bottom: 2rem;
       color: $color-tertiary;
+      text-transform: uppercase;
+
+      @media screen and (max-width: 960px) {
+        padding: 0;
+        font-size: 2.5rem;
+      }
     }
-    
+
     // Párrafo de descripción
     p {
       font-size: 1.5rem;
       margin-bottom: 2rem;
       color: $color-secondary;
+
+      @media screen and (max-width: 960px) {
+        padding: 0;
+        font-size: 1rem;
+      }
     }
-    
+
     // Botón de llamado a la acción
+
+   
     .cta-btn {
       position: relative;
       overflow: hidden;
@@ -61,7 +80,11 @@
       border: none;
       cursor: pointer;
       box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
-      
+
+      @media screen and (max-width: 960px) {
+       padding: 10px 20px;
+      }
+
       &::after {
         padding: 20px 32px;
         content: "HAZ CLICK AQUI!";
@@ -75,22 +98,34 @@
         transform: translateY(100%);
         transition: transform 0.3s ease-in-out, ease-in-out 0.3s;
       }
-      
+
       &:hover::after {
         height: 100%;
         transform: translateY(0);
         transition: transform 0.3s ease-in-out, ease-in-out 0.3s;
       }
-      
+
       &:not(:hover)::after {
         height: 0;
         transform: translateY(100%);
         transition: transform 0.3s ease-in-out, height 0.3s ease-in-out;
       }
-      
+
       &:active {
         transform: translateY(1px);
       }
     }
   }
+
+  .hero-image{
+    
+    img {
+      display: flex;
+      width: 65vh;
+      @media screen and (max-width: 960px) {
+        width: 45vh;
+      }
+    }
+  }
+  
 }

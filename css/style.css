@@ -10835,16 +10835,25 @@ textarea.form-control-lg {
 }
 
 .hero {
-  background: rgb(201, 167, 173);
-  background: linear-gradient(0deg, rgb(201, 167, 173) 0%, rgb(219, 194, 196) 25%, rgb(242, 228, 230) 50%, rgb(242, 228, 230) 75%, rgb(242, 228, 230) 100%);
   display: flex;
   align-items: center;
   height: 100vh;
   padding: 5vh;
+  background: rgb(201, 167, 173);
+  background: linear-gradient(0deg, rgb(201, 167, 173) 0%, rgb(219, 194, 196) 25%, rgb(242, 228, 230) 50%, rgb(242, 228, 230) 75%, rgb(242, 228, 230) 100%);
+}
+@media screen and (max-width: 960px) {
+  .hero {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: auto;
+    padding: 3vh 2vh;
+  }
 }
 .hero .hero-content {
   flex: 1;
-  max-width: 50%;
   height: 100%;
   padding: 2rem;
   display: flex;
@@ -10853,17 +10862,36 @@ textarea.form-control-lg {
   align-items: stretch;
   margin-bottom: 15vh;
 }
+@media screen and (max-width: 960px) {
+  .hero .hero-content {
+    margin-bottom: 2vh;
+    padding: 0;
+  }
+}
 .hero .hero-content h1, .hero .hero-content .h1 {
   font-family: "Fredoka", sans-serif;
-  font-weight: 500;
-  font-size: 8rem;
+  font-weight: 600;
+  font-size: 7rem;
   margin-bottom: 2rem;
   color: #c9a7ad;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 960px) {
+  .hero .hero-content h1, .hero .hero-content .h1 {
+    padding: 0;
+    font-size: 2.5rem;
+  }
 }
 .hero .hero-content p {
   font-size: 1.5rem;
   margin-bottom: 2rem;
   color: #22223b;
+}
+@media screen and (max-width: 960px) {
+  .hero .hero-content p {
+    padding: 0;
+    font-size: 1rem;
+  }
 }
 .hero .hero-content .cta-btn {
   position: relative;
@@ -10877,6 +10905,11 @@ textarea.form-control-lg {
   border: none;
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+}
+@media screen and (max-width: 960px) {
+  .hero .hero-content .cta-btn {
+    padding: 10px 20px;
+  }
 }
 .hero .hero-content .cta-btn::after {
   padding: 20px 32px;
@@ -10904,12 +10937,28 @@ textarea.form-control-lg {
 .hero .hero-content .cta-btn:active {
   transform: translateY(1px);
 }
+.hero .hero-image img {
+  display: flex;
+  width: 65vh;
+}
+@media screen and (max-width: 960px) {
+  .hero .hero-image img {
+    width: 45vh;
+  }
+}
 
 .about-us .banner {
   position: relative;
   height: 600px;
   background: url("../media/silvana-carlos-TPdR4J19SGQ-unsplash.jpg") no-repeat center center fixed;
   background-size: cover;
+}
+@media (max-width: 991.98px) {
+  .about-us .banner {
+    background: url("../media/banner-movil.jpg");
+    background-size: cover;
+    background-position: center;
+  }
 }
 .about-us .banner::before {
   content: "";
@@ -10963,7 +11012,7 @@ textarea.form-control-lg {
 }
 @media (max-width: 575.98px) {
   .about-us .banner {
-    height: 400px;
+    height: 700px;
   }
   .about-us .banner .banner-content {
     padding: 1rem;
@@ -10976,7 +11025,7 @@ textarea.form-control-lg {
     margin-top: 0.5rem;
   }
   .about-us .banner .banner-content .description {
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-top: 1.5rem;
   }
 }
@@ -11009,7 +11058,7 @@ textarea.form-control-lg {
   padding: 6rem;
   text-align: center;
   border-radius: 12px;
-  box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+  box-shadow: rgba(49, 47, 47, 0.268) -4px 9px 25px -6px;
 }
 @media screen and (max-width: 767px) {
   .about-us .features .feature {
@@ -11140,8 +11189,6 @@ textarea.form-control-lg {
 }
 
 .chart-container {
-  max-width: 1200px;
-  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
@@ -11233,7 +11280,7 @@ textarea.form-control-lg {
 }
 
 .intro {
-  padding-top: 3rem;
+  padding-top: 5rem;
   background-color: #e2d7d8;
   width: 100%;
   height: 100%;
@@ -11266,7 +11313,7 @@ textarea.form-control-lg {
   margin: 2rem 0;
 }
 .intro .intro-content .column-right {
-  padding: 8rem;
+  padding: 5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -11309,7 +11356,7 @@ textarea.form-control-lg {
   margin: 2rem 0;
 }
 .intro .intro-content-reverse .column-right {
-  padding: 8rem;
+  padding: 5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -11322,14 +11369,73 @@ textarea.form-control-lg {
 .intro .intro-content-reverse .column-right p {
   color: #22223b;
   font-family: "Varela Round", sans-serif;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
+}
+@media (max-width: 991.98px) {
+  .intro {
+    flex-direction: column;
+    height: auto;
+  }
+  .intro .intro-content {
+    flex-direction: column;
+    justify-content: center;
+    gap: 0px;
+    padding: 0rem 1rem;
+  }
+  .intro .intro-content .column-left {
+    margin: 0rem;
+    padding: 0;
+    font-size: 1.5rem;
+    display: flex;
+  }
+  .intro .intro-content .column-left img {
+    width: 90%;
+  }
+  .intro .intro-content .column-right {
+    padding: 1rem;
+  }
+  .intro .intro-content .column-right span {
+    font-size: 1.35rem;
+  }
+  .intro .intro-content .column-right p {
+    font-size: 1rem;
+  }
+  .intro .intro-content-reverse {
+    flex-direction: column;
+    justify-content: center;
+    gap: 0px;
+    padding: 3rem 1rem;
+  }
+  .intro .intro-content-reverse .column-left-reverse {
+    margin: 0rem;
+    padding: 0;
+    font-size: 1.5rem;
+    display: flex;
+  }
+  .intro .intro-content-reverse .column-left-reverse img {
+    width: 90%;
+  }
+  .intro .intro-content-reverse .column-right {
+    padding: 1rem;
+  }
+  .intro .intro-content-reverse .column-right span {
+    font-size: 1.35rem;
+  }
+  .intro .intro-content-reverse .column-right p {
+    font-size: 1rem;
+  }
 }
 
 .benchmarking {
-  max-height: 100vh;
-  margin-top: 5rem;
+  height: 100vh;
+  padding-top: 3.5vh;
   background-color: #e2d7d8;
   margin-bottom: 3.5vh;
+}
+@media (max-width: 991.98px) {
+  .benchmarking {
+    height: auto;
+  }
 }
 .benchmarking .bench-container {
   margin: 0;

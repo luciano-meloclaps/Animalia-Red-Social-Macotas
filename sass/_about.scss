@@ -5,6 +5,12 @@
     background: url("../media/silvana-carlos-TPdR4J19SGQ-unsplash.jpg")
       no-repeat center center fixed;
     background-size: cover;
+     //Ajusto la imagen banner para moviles 
+    @include media-breakpoint-down (lg) {
+      background: url("../media/banner-movil.jpg");
+      background-size: cover;      
+    background-position: center;
+    }
 
     &::before {
       content: "";
@@ -66,7 +72,7 @@
   // Responsive
   @include media-breakpoint-down(sm) {
     .banner {
-      height: 400px;
+      height: 700px;
 
       .banner-content {
         padding: 1rem;
@@ -81,7 +87,7 @@
         }
 
         .description {
-          font-size: 1rem; // Tamaño de fuente más pequeño en la versión móvil
+          font-size: 1.2rem; // Tamaño de fuente más pequeño en la versión móvil
           margin-top: 1.5rem;
         }
       }
@@ -117,7 +123,7 @@
       padding: 6rem;
       text-align: center;
       border-radius: 12px;
-      box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+      box-shadow: rgba(49, 47, 47, 0.268) -4px 9px 25px -6px;
 
       // Media query para pantallas pequeñas
       @media screen and (max-width: 767px) {
